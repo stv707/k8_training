@@ -4,7 +4,7 @@
 
 git clone https://github.com/stv707/k8_training.git
 
-cd k8_training/training_labs/docker/practice-G/Solution/
+cd k8_training/d-labs/practice-G/Solution/
 ```
 
 # Step 2 
