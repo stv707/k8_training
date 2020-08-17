@@ -50,4 +50,6 @@ _Also change **"/path_to/folder"** with the actual location of your website's ro
 
 ## Test
 
-Open the http://<YOUR IP>:4000 url on your browser.
+Open the http://vm001_public_ip:4000 url on your browser.
+
+# Refer Slides for more practice
