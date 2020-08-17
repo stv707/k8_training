@@ -29,11 +29,11 @@ main.sh will call all the other scripts automatically
 
 1. Go Azure CLI - Bash
 2. use git clone to clone this HUB
-3. How to use this scripts?
+3. How to use this script? 
 
-- cd into the hub clone
+- cd into the hub clone (k8_training)
 - chmod +x main.sh 
-- ./main.sh  [ vm001 | k8s | cloud ]
+- ./main.sh  [ vm001 | k8s | cloud | aks ]
 - You need to pass vm001 or k8s or cloud or aks as arguments
 - vm001 arg will create single VM with docker capabilities 
 - k8s arg will create 3 VM  (vm002[master], vm003[node1] and vm004[node2]) 
