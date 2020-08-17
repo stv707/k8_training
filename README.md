@@ -12,8 +12,8 @@ Docker/Container
 
 Kubernetes
 - VM002(master.example.local) - Centos78/K8s - k8 Master Node
-- VM003(node1.example.local) - Centos78/K8s - k8 worker Node
-- VM004(node2.example.local) - Centos78/K8s - k8 worker Node
+- VM003(node1.example.local)  - Centos78/K8s - k8 worker Node
+- VM004(node2.example.local)  - Centos78/K8s - k8 worker Node
 
 Additional Script Setup - 
 
@@ -48,4 +48,4 @@ Steven<br>
 
 steven@cognitoz.com | steven@outlook.my
 
-- Hub will go private on 21/08/2020 1500hrs GMT+8
+- Hub will go private on 23/08/2020 1500hrs GMT+8
