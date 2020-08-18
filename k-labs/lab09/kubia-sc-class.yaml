@@ -3,8 +3,8 @@ kind: StorageClass
 metadata:
   name: nfs-storage
 provisioner: example.local/nfs
+reclaimPolicy: Retain
 parameters:
   archiveOnDelete: "false"
-  accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Recycle
+  accessModes: ReadWriteOnce
+
