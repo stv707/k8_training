@@ -182,7 +182,6 @@ kubectl delete pods busybox2
 kubectl delete pvc --all
 
  kubectl delete -f nfs-provisioning/class.yaml
- kubectl delete -f nfs-provisioning/deployment.yaml
- kubectl delete -f nfs-provisioning/rbac.yaml
+ 
 ```
 END
