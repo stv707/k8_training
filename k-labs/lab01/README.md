@@ -51,7 +51,7 @@ master#> ssh node2.example.local
 ```
 
 # Step 5
-# Install Kubernetes <br>
+# Init Kubernetes <br>
 Perform kubeadm init on master <br>
 
 ```sh
