@@ -112,7 +112,7 @@ kubectl get pvc
 
 kubectl create -f mongodb-pod-pvc-1.yaml
 
-ls /nfsdata/dat1 
+ls /nfsdata/dat2
 
 kubectl exec -it mongodb1 mongo
 > use mystore
