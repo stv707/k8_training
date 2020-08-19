@@ -75,9 +75,9 @@ delete all the sub folder under dat3
 
 
 # Lab09B
-# If time permits , do this: Running MySQL Replication with Stateful Sets
-# refer: https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/
-# refer: https://medium.com/@Alibaba_Cloud/kubernetes-application-management-stateful-services-7825e076bcb3
+- If time permits , do this: Running MySQL Replication with Stateful Sets
+- refer: https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/
+- refer: https://medium.com/@Alibaba_Cloud/kubernetes-application-management-stateful-services-7825e076bcb3
 # Steps
 ```sh
 kubectl apply -f mysql-configmap.yaml
