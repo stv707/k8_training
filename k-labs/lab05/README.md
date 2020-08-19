@@ -41,12 +41,12 @@ kubectl get pods -o wide
 ssh node1.example.local 'ls /tmp/mongodb/'
 ssh node2.example.local 'ls /tmp/mongodb/'
 
-kubectl exec -it mongo-<pod1> mongo
+kubectl exec -it mongo-<pod1> -- mongo
 > use mystore
 > db.foo.insert({name:'foo Pan Pan'})
 > db.foo.find()
 
-kubectl exec -it mongo-<pod2> mongo
+kubectl exec -it mongo-<pod2> -- mongo
 > use mystore
 > db.bar.insert({name:'bar Pan Pan'})
 > db.bar.find()
@@ -56,11 +56,11 @@ kubectl delete pods mongo-<pod1>
 kubectl delete pods mongo-<pod1>
 
 kubectl get pods
-kubectl exec -it mongo-<new_pod1> mongo
+kubectl exec -it mongo-<new_pod1> -- mongo
 > use mystore
 > db.foo.find()
 
-kubectl exec -it mongo-<new_pod2> mongo
+kubectl exec -it mongo-<new_pod2> -- mongo
 > use mystore
 > db.bar.find()
 ```
