@@ -93,15 +93,15 @@ Deploy Ingress based Service
 Deploy Red and Blue svc, rc and single ingress to route to both services
 
 ```sh
-kubectl -f apply multi-ingress/kubia-red-svc.yaml
+kubectl apply -f  multi-ingress/kubia-red-svc.yaml
 
-kubectl -f apply multi-ingress/kubia-red-rc.yaml
+kubectl apply -f multi-ingress/kubia-red-rc.yaml
 
-kubectl -f apply multi-ingress/kubia-blue-svc.yaml
+kubectl apply -f multi-ingress/kubia-blue-svc.yaml
 
-kubectl -f apply multi-ingress/kubia-blue-rc.yaml
+kubectl apply -f multi-ingress/kubia-blue-rc.yaml
 
-kubectl -f apply multi-ingress/kubia-rb-ingress.yaml
+kubectl apply -f multi-ingress/kubia-rb-ingress.yaml
 
 kubectl get ingresses
 ```
