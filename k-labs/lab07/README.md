@@ -68,6 +68,10 @@ kill %1
 Communication between a Pod and Kubernetes REST API 
 
 ```sh
+
+**UPDATE ( allow POD to reach the API - WARNING : NOT FOR PRODUCTION USE )
+kubectl create clusterrolebinding permissive-binding --clusterrole=cluster-admin --group=system:serviceaccounts
+
 kubectl create -f curl.yaml
 kubectl exec -it curl -- sh
  # env | grep KUBERNETES_SERVICE
