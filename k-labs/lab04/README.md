@@ -83,7 +83,7 @@ kubectl get ingresses
 ADDRESS = vm002 Public IP address ( Check in Azure ) <br>
 You can add the following line to /etc/hosts (or C:\windows\system32\drivers\etc\hosts on Windows):
 
-(Public IP)  kubia.example.com
+(ADDRESS)  kubia.example.com
 
 Use your Web browser and reach http://kubia.example.com
 
@@ -108,8 +108,8 @@ kubectl get ingresses
 ADDRESS = vm002 Public IP address ( Check in Azure ) <br>
 You can add the following line to /etc/hosts (or C:\windows\system32\drivers\etc\hosts on Windows):
 
-(Public IP)  kubiared.example.com <br>
-(Public IP)  kubiablue.example.com
+(ADDRESS)  kubiared.example.com <br>
+(ADDRESS)  kubiablue.example.com
 
 Use your Web browser and reach http://kubiared.example.com and http://kubiablue.example.com
 
