@@ -114,7 +114,7 @@ kubectl create -f mongodb-pod-pvc-1.yaml
 
 ls /nfsdata/dat2
 
-kubectl exec -it mongodb1 mongo
+kubectl exec -it mongodb1 -- mongo
 > use mystore
 > db.foo.insert({name:'foo Pan Pan'})
 > db.foo.find()
