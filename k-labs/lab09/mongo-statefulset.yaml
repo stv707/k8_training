@@ -51,6 +51,8 @@ spec:
           env:
             - name: MONGO_SIDECAR_POD_LABELS
               value: "role=mongo,environment=test"
+            - name: KUBERNETES_MONGO_SERVICE_NAME
+              value: "mongo"
   volumeClaimTemplates:
   - metadata:
       name: mongo-persistent-storage

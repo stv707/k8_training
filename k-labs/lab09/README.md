@@ -8,10 +8,8 @@ kubectl get pods
 kubectl apply -f pod-with-initcontainer.yaml
 kubectl get pods --watch
 
-
 kubectl logs pod-with-initcontainer -c init-container-1 --timestamps=true
 kubectl logs pod-with-initcontainer -c init-container-2 --timestamps=true
-
 
 kubectl logs pod-with-initcontainer --timestamps=true 
 
@@ -25,9 +23,9 @@ Using a StatefulSet
 
 ```sh
 kubectl get pv,pvc
-kubectl get sc 
+kubectl get sc
 
-kubectl get pod 
+kubectl get pod
 kubectl get statefulsets
 
 kubectl apply -f kubia-sc-class.yaml
@@ -36,7 +34,7 @@ kubectl apply -f kubia-service-headless.yaml
 kubectl apply -f kubia-statefulset.yaml
 
 kubectl get pv,pvc
-kubectl get sc 
+kubectl get sc
 
 kubectl get pod 
 kubectl get statefulsets
@@ -45,9 +43,9 @@ kubectl get pods --watch
 k apply -f kubia-service-public.yaml
 
 **Playing with your Pods 
-k get svc 
+k get svc
 
-**Hit the pods 
+**Hit the pods
 curl (kubia-public IP address)
 
 **post some data
@@ -98,20 +96,27 @@ delete all the sub folder under dat3
 # Steps 
 
 ```sh
+
 ls /nfsdata/dat3/
-
 cat mongo-statefulset.yaml
-
 
 kubectl apply -f mongo-statefulset.yaml
 k get pods --watch
 
-
-
 ```
+# Please clean up before moving to next LAB
+```sh
+kubectl get statefulsets
+k delete statefulsets.apps (statefulset name)
+k get pods
 
+k delete pvc --all
+k delete pv --all
+k delete svc --all
 
-
+ls /nfsdata/dat3
+delete all the sub folder under dat3
+```
 
 
 # Lab09D
@@ -129,6 +134,8 @@ kubectl apply mysql-statefulset.yaml
 
 kubectl get pods -l app=mysql --watch
 
+
+** Create some DATA
 kubectl run mysql-client --image=mysql:5.7 -i --rm --restart=Never --\
   mysql -h mysql-0.mysql <<EOF
 CREATE DATABASE test;
@@ -136,6 +143,7 @@ CREATE TABLE test.messages (message VARCHAR(250));
 INSERT INTO test.messages VALUES ('hello');
 EOF
 
+** Create some data on READ only POD/Service -- it will fail 
 kubectl run mysql-client --image=mysql:5.7 -i --rm --restart=Never --\
   mysql -h mysql-read <<EOF
 CREATE DATABASE test;
@@ -163,8 +171,10 @@ kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --\
 
 **Scale the statefulsets 
 
+
+
 ```
-# Please clean up 
+# Please clean up
 ```sh
 kubectl get statefulsets
 k delete statefulsets.apps mysql
