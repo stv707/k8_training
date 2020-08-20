@@ -52,7 +52,7 @@ k delete  -f  limited-pod.yaml --force
 k apply -f memoryhog.yaml
 k get pods --watch 
 
-**Why pod goes to Crash? 
+**Check the detail on what happen? 
 kubectl describe pod memoryhog 
 
 k delete -f memoryhog.yaml --force 
@@ -63,8 +63,12 @@ k get limitranges
 
 k describe limitranges example
 
+k apply -f kubia-manual.yaml
+k get pod
 
+k describe pod kubia-manual
 
+**
 
 ```
 # Lab10B
