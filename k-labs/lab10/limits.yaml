@@ -31,4 +31,4 @@ spec:
     min:
       storage: 1Gi
     max:
-      storage: 10Gi
+      storage: 3Gi

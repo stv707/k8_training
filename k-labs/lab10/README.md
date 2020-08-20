@@ -61,6 +61,7 @@ k delete -f memoryhog.yaml --force
 k apply -f limits.yaml
 k get limitranges
 
+k describe limitranges example
 
 
 
