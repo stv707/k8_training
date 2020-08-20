@@ -1,5 +1,4 @@
-# Lab = COMING SOON
-
+# Lab10A
 # Step 
 
 
@@ -8,7 +7,26 @@
 
 ```
 
+
+# Lab10B
 # Step 
+
+* create NameSpace 
+kubectl create namespace jedi
+kubectl create namespace sith 
+
+
+* run create_user_namespace.sh to generate kubeconfig 
+
+
+
+
+
+* create hard pod limit 
+kubectl apply -f quota-pod.yaml --namespace=devteam
+
+
+
 
 
 ```sh
