@@ -4,15 +4,20 @@ Using init container
 
 
 ```sh
+kubectl get pods
+kubectl apply -f pod-with-initcontainer.yaml
+kubectl get pods --watch
 
 
+kubectl logs pod-with-initcontainer -c init-container-1 --timestamps=true
+kubectl logs pod-with-initcontainer -c init-container-2 --timestamps=true
 
+
+kubectl logs pod-with-initcontainer --timestamps=true 
+
+kubectl get pods
+kubectl delete pod pod-with-initcontainer 
 ```
-
-
-
-
-
 
 # Lab09B
 # Step 
@@ -139,7 +144,6 @@ kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --\
   mysql -h mysql-read -e "SELECT * FROM test.messages"
 
 **Scale the statefulsets 
-
 
 ```
 # Please clean up 

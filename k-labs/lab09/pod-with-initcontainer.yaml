@@ -12,7 +12,7 @@ spec:
   initContainers:
   - name: init-container-1
     image: busybox
-    command: ['sh', '-c', 'echo Inside init-container-1 start; sleep 10;echo init-container-1 completed;']
+    command: ['sh', '-c', 'echo Inside init-container-1 start; sleep 45 ;echo init-container-1 completed;']
   - name: init-container-2
     image: busybox
-    command: ['sh', '-c', 'echo Inside init-container-2 start; sleep 20;echo init-container-2 completed;']
+    command: ['sh', '-c', 'echo Inside init-container-2 start; sleep 55 ;echo init-container-2 completed;']
