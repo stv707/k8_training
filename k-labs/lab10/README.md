@@ -3,8 +3,43 @@
 Limiting resources available to a pods/containers
 ```sh
 
+**Request Resource 
+
+cat requests-pod.yaml
+
+kubectl apply -f requests-pod.yaml 
+
+kubectl exec -it requests-pod -- sh 
+> top 
+> exit
 
 
+kubectl run requests-pod-2 --image=busybox --restart Never --requests='cpu=800m,memory=20Mi' -- dd if=/dev/zero of=/dev/null 
+
+kubectl run requests-pod-3 --image=busybox --restart Never --requests='cpu=1,memory=20Mi' -- dd if=/dev/zero of=/dev/null 
+
+kubectl run requests-pod-4 --image=busybox --restart Never --requests='cpu=1,memory=20Mi' -- dd if=/dev/zero of=/dev/null 
+
+kubectl run requests-pod-5 --image=busybox --restart Never --requests='cpu=1,memory=20Mi' -- dd if=/dev/zero of=/dev/null 
+
+ssh node1.example.local 
+top 
+exit
+
+ssh node1.example.local
+top
+exit
+
+kubectl describe po requests-pod-5
+
+k get pods 
+kubectl delete po requests-pod-4 --force
+k get pods 
+
+k delete requests-pod-2 requests-pod-3 requests-pod-5 requests-pod  --force 
+
+**limit 
+k create -f limited-pod.yaml
 
 
 ```
@@ -68,14 +103,6 @@ kubectl apply -f quota_test_jedi.yaml
 su - sith1 
 kubectl apply -f quota_test_sith.yaml
 *check the pods / deployments 
-
-
-
-
-```
-
-```sh
-
 ```
 
 # Step 
