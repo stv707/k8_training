@@ -185,8 +185,44 @@ kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --\
   mysql -h mysql-read -e "SELECT * FROM test.messages"
 
 **Scale the statefulsets
+k get statefulsets.apps
+
+k scale statefulset --replicas=5 mysql
+k get pod --watch
+
+kubectl exec -it mysql-3  -- mysql
+mysql> SELECT * FROM test.messages; 
+mysql> exit; 
+
+kubectl exec -it mysql-4  -- mysql
+mysql> SELECT * FROM test.messages;
+mysql> exit;
+
+k scale statefulset --replicas=2 mysql
+kubectl exec -it mysql-0  -- mysql
+mysql> SELECT * FROM test.messages; 
+mysql> exit; 
+
+kubectl exec -it mysql-1  -- mysql
+mysql> SELECT * FROM test.messages;
+mysql> exit;
 
 
+ls -l /nfsdata/dat3/
+
+k get pv
+k get pvc
+
+k scale statefulset --replicas=5 mysql
+k get pod --watch
+
+kubectl exec -it mysql-3  -- mysql
+mysql> SELECT * FROM test.messages; 
+mysql> exit; 
+
+kubectl exec -it mysql-4  -- mysql
+mysql> SELECT * FROM test.messages;
+mysql> exit;
 
 ```
 # Please clean up
