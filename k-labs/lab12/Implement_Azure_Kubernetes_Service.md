@@ -1,15 +1,6 @@
----
-lab:
-    title: '09c - Implement Azure Kubernetes Service'
-    module: 'Module 09 - Serverless Computing'
----
 
-# Lab 09c - Implement Azure Kubernetes Service
-# Student lab manual
 
-## Lab scenario
-
-Contoso has a number of multi-tier applications that are not suitable to run by using Azure Container Instances. In order to determine whether they can be run as containerized workloads, you want to evaluate using Kubernetes as the container orchestrator. To further minimize management overhead, you want to test Azure Kubernetes Service, including its simplified deployment experience and scaling capabilities.
+# Implement Azure Kubernetes Service
 
 ## Objectives
 
@@ -19,7 +10,6 @@ In this lab, you will:
 + Task 2: Deploy pods into the Azure Kubernetes Service cluster
 + Task 3: Scale containerized workloads in the Azure Kubernetes service cluster
 
-## Estimated timing: 40 minutes
 
 ## Instructions
 
@@ -38,8 +28,8 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Setting | Value |
     | ---- | ---- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-09c-rg1** |
-    | Kubernetes cluster name | **az104-9c-aks1** |
+    | Resource group | the name of a new resource group **aks-rg** |
+    | Kubernetes cluster name | **aks1** |
     | Region | the name of a region where you can provision a Kubernetes cluster |
     | Kubernetes version | accept the default |
     | Node size | accept the default |
@@ -71,8 +61,6 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
 
 1. Click **Next: Integration >**, on the **Integration** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create** and then click **Create**. 
 
-    >**Note**: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab. 
-
     >**Note**: Wait for the deployment to complete. This should take about 10 minutes.
 
 
@@ -82,9 +70,9 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
 1. On the deployment blade, click the **Go to resource** link.
 
-1. On the **az104-9c-aks1** Kubernetes service blade, in the **Settings** section, click **Node pools**.
+1. On the **aks1** Kubernetes service blade, in the **Settings** section, click **Node pools**.
 
-1. On the **az104-9c-aks1 - Node pools** blade, verify that the cluster consists of a single pool with one node.
+1. On the **aks1 - Node pools** blade, verify that the cluster consists of a single pool with one node.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
@@ -95,9 +83,9 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 1. From the Cloud Shell pane, run the following to retrieve the credentials to access the AKS cluster:
 
     ```sh
-    RESOURCE_GROUP='az104-09c-rg1'
+    RESOURCE_GROUP='aks-rg1'
 
-    AKS_CLUSTER='az104-9c-aks1'
+    AKS_CLUSTER='aks1'
 
     az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER
     ``` 
@@ -220,16 +208,16 @@ In this task, you will scale horizontally the number of pods and then number of 
 1. List all resource groups created throughout the labs of this module by running the following command:
 
    ```sh
-   az group list --query "[?starts_with(name,'az104-09c')].name" --output tsv
+   az group list --query "[?starts_with(name,'aks-rg')].name" --output tsv
    ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
    ```sh
-   az group list --query "[?starts_with(name,'az104-09c')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   az group list --query "[?starts_with(name,'aks-rg')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    ```
 
-    >**Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
+
 
 #### Review
 

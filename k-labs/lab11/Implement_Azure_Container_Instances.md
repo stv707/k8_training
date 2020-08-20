@@ -2,8 +2,6 @@
 
 # Implement Azure Container Instances
 
-## Lab scenario
-
 ## Objectives
 
 In this lab, you will:
