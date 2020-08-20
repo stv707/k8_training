@@ -48,8 +48,8 @@ cp quota_test_sith.yaml  ~sith1
 
 
 * set .bashrc to call the kubeconfig file on each home dir 
-echo "export KUBECONFIG=$HOME/jedi_kubeconfig"  >> ~jedi1/.bashrc 
-echo "export KUBECONFIG=$HOME/sith_kubeconfig"  >> ~sith1/.bashrc 
+echo "export KUBECONFIG=/home/jedi1/jedi_kubeconfig"  >> ~jedi1/.bashrc 
+echo "export KUBECONFIG=/home/sith1/sith_kubeconfig"  >> ~sith1/.bashrc 
 
 * update Access
 
