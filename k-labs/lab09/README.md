@@ -1,4 +1,4 @@
-# Lab09B
+# Lab09A
 # Step 
 Using init container
 
@@ -93,8 +93,8 @@ delete all the sub folder under dat3
 ```
 
 # LAB09C
-# Steps 
-
+# Steps
+MongoDB StatefulSet 
 ```sh
 
 ls /nfsdata/dat3/
@@ -154,6 +154,21 @@ EOF
 
 kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --\
   mysql -h mysql-read -e "SELECT * FROM test.messages"
+
+
+kubectl exec -it mysql-0  -- mysql
+mysql> SELECT * FROM test.messages; 
+mysql> exit; 
+
+kubectl exec -it mysql-1  -- mysql
+mysql> SELECT * FROM test.messages; 
+mysql> exit; 
+
+kubectl exec -it mysql-2  -- mysql
+mysql> SELECT * FROM test.messages; 
+mysql> exit; 
+
+
   
 kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --\
   mysql -h mysql-read -e "SELECT @@server_id,NOW()"
