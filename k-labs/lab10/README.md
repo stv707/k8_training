@@ -53,9 +53,21 @@ echo "export KUBECONFIG=$HOME/sith_kubeconfig"  >> ~sith1/.bashrc
 
 * update Access
 
-chown -R jedi1:jedi1  ~jedi1/*.* 
+chown -R jedi1:jedi1  ~jedi1/* 
 
-chown -R sith1:sith1  ~sith1/*.*
+chown -R sith1:sith1  ~sith1/*
+
+su - jedi1 
+kubectl apply -f quota_test_jedi.yaml
+*check the pods / deployments 
+
+*on another Terminal 
+su - sith1 
+kubectl apply -f quota_test_sith.yaml
+*check the pods / deployments 
+
+
+
 
 ```
 
