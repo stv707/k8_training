@@ -38,14 +38,34 @@ k get pods
 
 k delete requests-pod-2 requests-pod-3 requests-pod-5 requests-pod  --force 
 
-**limit 
+**Explore limits
 k create -f limited-pod.yaml
+
+k get pods -o wide
+
+k describe nodes (node where the pod is running)
+
+k delete  -f  limited-pod.yaml --force
+
+**Some memory test 
+
+k apply -f memoryhog.yaml
+k get pods --watch 
+
+**Why pod goes to Crash? 
+kubectl describe pod memoryhog 
+
+k delete -f memoryhog.yaml --force 
+
+**Explore limitsranges
+k apply -f limits.yaml
+k get limitranges
+
+
+
 
 
 ```
-
-
-
 # Lab10B
 # Step 
 ResourceQuota
@@ -103,62 +123,6 @@ kubectl apply -f quota_test_jedi.yaml
 su - sith1 
 kubectl apply -f quota_test_sith.yaml
 *check the pods / deployments 
-```
-
-# Step 
-
-
-```sh
-
-```
-
-# Step 
-
-```sh
-
-```
-
-# Step
-
-```sh
-
-
-```
-
-# Step
-
-
-```sh
-
-```
-
-# Step
-
-```sh
-
-```
-
-# Step
-
-
-```sh
-
-```
-
-
-
-# Step
-
-```sh
-
-```
-
-# Step
-
-
-
-```sh
-
 ```
 
 END
