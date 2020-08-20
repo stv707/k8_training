@@ -94,8 +94,20 @@ ls /nfsdata/dat3
 delete all the sub folder under dat3
 ```
 
+# LAB09C
+# Steps 
 
-# Lab09C
+```sh
+
+
+
+```
+
+
+
+
+
+# Lab09D
 - Running MySQL Replication with Stateful Sets
 - refer: https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/
 - refer: https://medium.com/@Alibaba_Cloud/kubernetes-application-management-stateful-services-7825e076bcb3
