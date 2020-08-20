@@ -12,6 +12,7 @@ spec:
   clusterIP: None
   selector:
     role: mongo
+    environment: test
 ---
 apiVersion: apps/v1
 kind: StatefulSet

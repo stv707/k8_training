@@ -80,10 +80,10 @@ k get pods -o wide
 kubectl uncordon (node-name)
 ```
 
-# Please clean up before moving to LAB09B
+# Please clean up before moving to next LAB
 ```sh
 kubectl get statefulsets
-k delete statefulsets.apps kubia
+k delete statefulsets.apps (statefulset name)
 k get pods
 
 k delete pvc --all
@@ -98,6 +98,13 @@ delete all the sub folder under dat3
 # Steps 
 
 ```sh
+ls /nfsdata/dat3/
+
+cat mongo-statefulset.yaml
+
+
+kubectl apply -f mongo-statefulset.yaml
+k get pods --watch
 
 
 
@@ -110,7 +117,6 @@ delete all the sub folder under dat3
 # Lab09D
 - Running MySQL Replication with Stateful Sets
 - refer: https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/
-- refer: https://medium.com/@Alibaba_Cloud/kubernetes-application-management-stateful-services-7825e076bcb3
 # Steps
 ```sh
 kubectl apply -f mysql-configmap.yaml
