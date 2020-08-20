@@ -1,4 +1,20 @@
-# Lab09A
+# Lab09B
+# Step 
+Using init container
+
+
+```sh
+
+
+
+```
+
+
+
+
+
+
+# Lab09B
 # Step 
 Using a StatefulSet
 
@@ -67,14 +83,14 @@ k get pods
 
 k delete pvc --all
 k delete pv --all
-k delete svc --all 
+k delete svc --all
 
 ls /nfsdata/dat3 
-delete all the sub folder under dat3 
+delete all the sub folder under dat3
 ```
 
 
-# Lab09B
+# Lab09C
 - Running MySQL Replication with Stateful Sets
 - refer: https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/
 - refer: https://medium.com/@Alibaba_Cloud/kubernetes-application-management-stateful-services-7825e076bcb3

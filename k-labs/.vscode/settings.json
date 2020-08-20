@@ -1,7 +1,10 @@
 {
     "cSpell.words": [
+        "busybox",
         "clusterrole",
         "clusterrolebinding",
+        "initcontainer",
+        "myapp",
         "serviceaccounts"
     ]
 }
