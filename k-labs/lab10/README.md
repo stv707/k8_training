@@ -3,13 +3,15 @@
 
 
 
-```sh
 
-```
+
+
 
 
 # Lab10B
 # Step 
+ResourceQuota
+```sh
 
 * create NameSpace 
 kubectl create namespace jedi
@@ -55,7 +57,7 @@ chown -R jedi1:jedi1  ~jedi1/*.*
 
 chown -R sith1:sith1  ~jedi1/*.*
 
-
+```
 
 ```sh
 
