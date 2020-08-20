@@ -130,7 +130,7 @@ k get cm
 kubectl apply -f mysql-services.yaml
 k get svc
 
-kubectl apply mysql-statefulset.yaml 
+kubectl apply -f mysql-statefulset.yaml 
 
 kubectl get pods -l app=mysql --watch
 
@@ -169,7 +169,7 @@ kubectl delete pod mysql-2
 kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --\
   mysql -h mysql-read -e "SELECT * FROM test.messages"
 
-**Scale the statefulsets 
+**Scale the statefulsets
 
 
 
