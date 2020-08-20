@@ -36,7 +36,7 @@ k get pods
 kubectl delete po requests-pod-4 --force
 k get pods 
 
-k delete requests-pod-2 requests-pod-3 requests-pod-5 requests-pod  --force 
+k delete pod requests-pod-2 requests-pod-3 requests-pod-5 requests-pod  --force 
 
 **Explore limits
 k create -f limited-pod.yaml
