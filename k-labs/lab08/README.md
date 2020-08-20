@@ -29,7 +29,7 @@ Perform these steps on terminal 2 <br>
 we are using ClusterIP type for service, check the IP <br>
 ```sh
   kubectl get svc kubia
-  while true; do curl http://<kubia_app_ClusterIP>; done
+  while true; do curl http://<kubia_app_ClusterIP>; sleep 5 ;  done
 ```
 
 Perform these steps on terminal 1 <br>

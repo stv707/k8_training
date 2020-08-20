@@ -68,8 +68,6 @@ k get pod
 
 k describe pod kubia-manual
 
-**
-
 ```
 # Lab10B
 # Step 
