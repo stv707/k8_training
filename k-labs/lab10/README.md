@@ -1,10 +1,13 @@
 # Lab10A
 # Step 
+Limiting resources available to a pods/containers
+```sh
 
 
 
 
 
+```
 
 
 
