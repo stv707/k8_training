@@ -104,7 +104,6 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
     kubectl create deployment nginx-deployment --image=nginx
     ```
 
-    > **Note**: Make sure to use lower case letters when typing the name of the deployment (nginx-deployment)
 
 1. From the **Cloud Shell** pane, run the following to verify that a Kubernetes pod has been created:
 
