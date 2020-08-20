@@ -55,7 +55,7 @@ echo "export KUBECONFIG=$HOME/sith_kubeconfig"  >> ~sith1/.bashrc
 
 chown -R jedi1:jedi1  ~jedi1/*.* 
 
-chown -R sith1:sith1  ~jedi1/*.*
+chown -R sith1:sith1  ~sith1/*.*
 
 ```
 
