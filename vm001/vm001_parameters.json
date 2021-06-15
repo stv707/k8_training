@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "southeastasia"
+            "value": "eastus"
         },
         "networkInterfaceName": {
             "value": "vm001423"
